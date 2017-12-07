@@ -212,7 +212,7 @@ nav
 
 			.our-classes_items 
 				width: 100%
-				display:flex !important
+				display:flex !important 
 				box-shadow: 4px 4px 15px rgba(0,0,0, .1)
 				border-radius: 8px
 				align-items: center
@@ -245,3 +245,28 @@ nav
 					.lastDescr 
 						color: #999
 						font-size: .875em
+
+.gallery-block
+	display: flex
+	flex-wrap: wrap
+	margin-top: 125px
+
+	a
+		display: block
+		width: 25%
+		position: relative
+
+		&:hover .img-bg
+			display: block
+
+		img
+			width: 100%
+			
+
+		.img-bg
+			display: none
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0

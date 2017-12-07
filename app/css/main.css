@@ -267,3 +267,28 @@ nav {
           .our-classes .our-classes_list a .our-classes_items .descrBlock .lastDescr {
             color: #999;
             font-size: .875em; }
+
+.gallery-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 125px; }
+  .gallery-block a {
+    display: block;
+    width: 25%;
+    position: relative; }
+    .gallery-block a:hover .img-bg {
+      display: block; }
+    .gallery-block a img {
+      width: 100%; }
+    .gallery-block a .img-bg {
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
