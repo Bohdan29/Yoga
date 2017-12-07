@@ -13,6 +13,16 @@ body
 	margin: 0 auto
 	max-width: 1170px
 
+h2
+	text-align: center
+	padding: 0
+	text-transform: uppercase
+	color: #5b6ceb
+	font: 
+		size: 28px
+		weight: 700
+	letter-spacing: .9px
+
 a.nav-link
 	display: block
 	font-size: 14px
@@ -52,7 +62,7 @@ nav
 			a.nav-link:hover:before
 				position: absolute
 				content: ''
-				bottom: -6px
+				bottom: 3px
 				left: 0
 				right: 0
 				margin-left: auto
@@ -169,3 +179,69 @@ nav
 			h3
 				width: 67%
 		
+
+.our-classes
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	margin-top: 99px
+
+	h2 
+		line-height: 2.5
+
+	.our-classes_list
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		margin-top: 57px
+
+		a 
+			display: block
+			width: 48.3%
+			margin: 
+				top: 16px
+				bottom: 9px
+				right: 3%
+			text-decoration: none
+			border-radius: 5px
+
+			&:nth-child(2n)
+				margin-right: 0
+
+			.our-classes_items 
+				width: 100%
+				display:flex !important
+				box-shadow: 4px 4px 15px rgba(0,0,0, .1)
+				border-radius: 8px
+				align-items: center
+
+				img
+					display: block
+			
+				.descrBlock
+					padding-left: 32px
+					padding-right: 1%
+
+					h1
+						color: #777777
+						font:
+							size: 20px
+							weight: 700
+						text-transform: uppercase
+						margin:
+							top: -4px
+							bottom: 23px
+						letter-spacing: 0px
+
+					p.mainDescr
+						font-size: .875em
+						color: #555555
+						line-height: 1.7
+						margin-bottom: 27px
+
+
+					.lastDescr 
+						color: #999
+						font-size: .875em
