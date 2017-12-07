@@ -1,0 +1,88 @@
+*
+	margin: 0
+	padding: 0
+
+body
+	font-family: 'Open Sans', sans-serif
+	margin: 0
+	padding: 0
+	position: relative
+
+.container
+	margin: 0 auto
+	max-width: 1170px
+
+a.nav-link
+	display: block
+	font-size: 14px
+	font-weight: 700
+	text-decoration: none
+	color: #606060
+	position: relative
+	text-align: center
+
+	&:hover,
+	&:active
+		color: #5363db 
+
+header
+	height: 100px
+
+nav 
+	display: flex
+	justify-content: center
+	align-items: center
+	
+	
+
+	a.logo-link
+		margin: 16px 150px
+		position: relative
+	
+	ul
+		list-style-type: none 
+		display: flex
+
+		li
+			margin-right: 30px
+			position: relative
+		 
+			a.nav-link:hover:before
+				position: absolute
+				content: ''
+				bottom: -6px
+				left: 0
+				right: 0
+				margin-left: auto
+				margin-right: auto
+				width: 30px
+				height: 1px
+				border-bottom: 1px solid #5363db
+				transition: all .5s
+
+			&:last-child
+				margin-right: 0
+
+			
+	
+	ul.nav-left
+		width: 40%
+		justify-content: flex-end
+
+	ul.nav-right
+		width: 40%
+		justify-content: flex-start
+
+// #magic-line 
+// 	display: none
+// 	position: absolute
+// 	bottom: 20px
+// 	left: 0
+// 	width: 70px
+// 	height: 1px
+// 	background: #5363db
+
+// .current_page_item
+// 	z-index: 100
+// 	background-color: #fff
+
