@@ -3,10 +3,11 @@
   padding: 0; }
 
 body {
+  width: 100%;
+  position: relative;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  padding: 0;
-  position: relative; }
+  padding: 0; }
 
 .container {
   margin: 0 auto;
@@ -15,11 +16,12 @@ body {
 a.nav-link {
   display: block;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   color: #606060;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 9px; }
   a.nav-link:hover, a.nav-link:active {
     color: #5363db; }
 
@@ -79,3 +81,101 @@ nav {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
+
+.slider-block {
+  background-image: url("../img/bg-sliderBlock.png");
+  background-position: top center;
+  background-repeat: repeat-x;
+  min-height: 600px; }
+  .slider-block .slider-block_content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    padding: 100px 0; }
+    .slider-block .slider-block_content .form-blcok {
+      width: 19.5%;
+      background-color: #fff;
+      padding: 33px 40px 35px 30px;
+      -webkit-border-radius: 18px;
+              border-radius: 18px;
+      margin-left: 16.5%;
+      -webkit-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+              box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); }
+      .slider-block .slider-block_content .form-blcok form {
+        width: 100%; }
+      .slider-block .slider-block_content .form-blcok p {
+        width: 100%; }
+      .slider-block .slider-block_content .form-blcok p input {
+        width: 90%;
+        border: 1px solid;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        padding: 12px 10px 19px 8px;
+        margin-bottom: 17px;
+        background-color: #f2f2f2;
+        color: #888;
+        font-size: .875em;
+        border-color: transparent; }
+      .slider-block .slider-block_content .form-blcok select {
+        width: 100%;
+        border: none;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        padding: 1.125em 5%;
+        background-color: #f2f2f2;
+        color: #888;
+        font-size: .875em; }
+      .slider-block .slider-block_content .form-blcok h3 {
+        color: #5363db;
+        font-size: 1.55em;
+        font-weight: 600;
+        padding-bottom: 25px;
+        letter-spacing: .8px; }
+      .slider-block .slider-block_content .form-blcok button {
+        width: 75%;
+        background-color: #5b6ceb;
+        -webkit-box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+                box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+        border: none;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
+        color: #fff;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 16px 0;
+        margin-top: 32px;
+        margin-left: 28%; }
+        .slider-block .slider-block_content .form-blcok button:hover, .slider-block .slider-block_content .form-blcok button:focus {
+          background-color: #475bf1; }
+    .slider-block .slider-block_content .title-block {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      margin-top: 56px; }
+      .slider-block .slider-block_content .title-block h1 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 33px;
+        line-height: 1.5; }
+      .slider-block .slider-block_content .title-block h3 {
+        width: 67%; }
