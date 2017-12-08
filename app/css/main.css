@@ -292,3 +292,134 @@ nav {
       bottom: 0;
       right: 0;
       left: 0; }
+
+.aboutUsBlock {
+  width: 100%;
+  margin-top: 120px; }
+  .aboutUsBlock .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .aboutUsBlock .container .abUsCont {
+      width: 40%;
+      margin-top: 13px; }
+      .aboutUsBlock .container .abUsCont h1 {
+        margin-bottom: 18px;
+        font-size: 30px;
+        color: #5b6ceb;
+        font-weight: bold;
+        text-transform: uppercase; }
+      .aboutUsBlock .container .abUsCont p {
+        font-size: .875em;
+        color: #555;
+        font-weight: 500;
+        line-height: 1.5; }
+    .aboutUsBlock .container .abUsSlider {
+      width: 51%;
+      margin-top: -5px;
+      margin-right: -1%; }
+      .aboutUsBlock .container .abUsSlider .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto; }
+        .aboutUsBlock .container .abUsSlider .slideshow-container .prev, .aboutUsBlock .container .abUsSlider .slideshow-container .next {
+          cursor: pointer;
+          position: absolute;
+          top: 41%;
+          widows: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: #fff;
+          font-weight: bold;
+          font-size: 18px;
+          -webkit-transition: 0.6s ease;
+          -o-transition: 0.6s ease;
+          transition: 0.6s ease;
+          -webkit-border-radius: 0 3px 3px 0;
+                  border-radius: 0 3px 3px 0; }
+        .aboutUsBlock .container .abUsSlider .slideshow-container .prev {
+          left: -34px; }
+        .aboutUsBlock .container .abUsSlider .slideshow-container .next {
+          right: 0;
+          -webkit-border-radius: 3px 0 0 3px;
+                  border-radius: 3px 0 0 3px;
+          right: -34px; }
+        .aboutUsBlock .container .abUsSlider .slideshow-container .dot {
+          cursor: pointer;
+          width: 13px;
+          height: 13px;
+          margin: 0 2px;
+          background-color: #bbb;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          display: inline-block;
+          -webkit-transition: background-color 0.6s ease;
+          -o-transition: background-color 0.6s ease;
+          transition: background-color 0.6s ease; }
+        .aboutUsBlock .container .abUsSlider .slideshow-container .active, .aboutUsBlock .container .abUsSlider .slideshow-container dot:hover {
+          background-color: #717171; }
+        .aboutUsBlock .container .abUsSlider .slideshow-container .fade {
+          -webkit-animation-name: fade;
+                  animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+                  animation-duration: 1.5s; }
+
+.featuresBlock {
+  background-image: url("../img/bg-features.png");
+  background-position: top center;
+  background-repeat: repeat-x;
+  width: 100%; }
+  .featuresBlock .featuresList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 120px 0;
+    margin-top: 77px; }
+    .featuresBlock .featuresList .featureItem {
+      width: 23%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 5px;
+      text-align: center;
+      color: #fff; }
+      .featuresBlock .featuresList .featureItem:nth-child(5), .featuresBlock .featuresList .featureItem:nth-child(6), .featuresBlock .featuresList .featureItem:nth-child(7), .featuresBlock .featuresList .featureItem:nth-child(8) {
+        margin-top: 55px; }
+      .featuresBlock .featuresList .featureItem h3 {
+        margin-top: 27px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 27px; }
+      .featuresBlock .featuresList .featureItem p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        margin-top: 12px; }
