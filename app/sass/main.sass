@@ -39,7 +39,7 @@ a.nav-link
 
 header
 	height: 100px
-	
+
 .fixed
 	position: fixed
 	width: 100%
@@ -477,9 +477,27 @@ nav
 						color: #555
 						font-size: 1.125em
 						font-weight: 500
-						line-height: 24px
+						line-height: 32px
+						position: relative
+						padding: 36px 0
+						margin-top: -40px	
+
+						&:last-child
+								padding-bottom: 0	
+
+						&:nth-child(1):before,
+						&:nth-child(2):before
+							position: absolute
+							content: ''
+							background-image: url("../img/bottLine.png")
+							bottom: 19px
+							left: 40.5%
+							height: 1px
+							width: 99px
+
 						
 
+						
 					img
 						margin: 0
 						padding: 20px 0

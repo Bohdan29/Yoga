@@ -517,7 +517,20 @@ nav {
             color: #555;
             font-size: 1.125em;
             font-weight: 500;
-            line-height: 24px; }
+            line-height: 32px;
+            position: relative;
+            padding: 36px 0;
+            margin-top: -40px; }
+            .pricesBlock .priceList .priceItems .contItems .dateTime li:last-child {
+              padding-bottom: 0; }
+            .pricesBlock .priceList .priceItems .contItems .dateTime li:nth-child(1):before, .pricesBlock .priceList .priceItems .contItems .dateTime li:nth-child(2):before {
+              position: absolute;
+              content: '';
+              background-image: url("../img/bottLine.png");
+              bottom: 19px;
+              left: 40.5%;
+              height: 1px;
+              width: 99px; }
           .pricesBlock .priceList .priceItems .contItems .dateTime img {
             margin: 0;
             padding: 20px 0; }
