@@ -303,53 +303,53 @@ nav
 				top: -5px
 				right: -1%
 
-			.slideshow-container
-				max-width: 1000px
-				position: relative
-				margin: auto
-				
+.slick-prev
+	width: 50px !important
+	height: 50px !important
+	border-radius: 40px !important
+	background-color: #fff !important
+	box-shadow: 3px 6px 13px rgba(0,0,0,0.1) !important
+	top: 45% !important
+	left: -16px !important
+	z-index: 1 !important
 
-				// .mySlides
-				// 	box-shadow: 4px 4px 15px rgba(0,0,0, .1)
-				// 	border-radius: 12px
+	&:hover
+		background-color: #fff !important
+		
 
-				.prev, .next
-					cursor: pointer
-					position: absolute
-					top: 41%
-					widows: auto
-					margin-top: -22px
-					padding: 16px
-					color: #fff
-					font-weight: bold
-					font-size: 18px
-					transition: 0.6s ease
-					border-radius: 0 3px 3px 0
-				
-				.prev
-					left: -34px
+	&:before
+		content: "\f104" !important
+		font-family: FontAwesome !important
+		color: #5b6ceb !important
+		opacity: 1 !important
+		font-size: 37px !important
 
-				.next
-					right: 0
-					border-radius: 3px 0 0 3px
-					right: -34px
+	&:hover:before
+		color: #475bf1 !important
 
-				.dot
-					cursor: pointer
-					width: 13px
-					height: 13px
-					margin: 0 2px
-					background-color: #bbb
-					border-radius: 50%
-					display: inline-block
-					transition: background-color 0.6s ease
+.slick-next
+	width: 50px !important
+	height: 50px !important
+	border-radius: 40px !important
+	background-color: #fff !important
+	box-shadow: 3px 6px 13px rgba(0,0,0,0.1) !important
+	top: 45% !important
+	right: -16px !important
+	z-index: 1 !important
 
-				.active, dot:hover
-					background-color: #717171
-				
-				.fade
-					animation-name: fade
-					animation-duration: 1.5s 
+	&:hover
+		background-color: #fff !important
+		
+
+	&:before
+		content: "\f105" !important
+		font-family: FontAwesome !important
+		color: #5b6ceb !important
+		opacity: 1 !important
+		font-size: 37px !important
+
+	&:hover:before
+		color: #475bf1 !important
 
 .features-block
 	background-image: url("../img/bg-features.png")
@@ -579,3 +579,164 @@ nav
 				line-height: 22px
 				padding: 0
 				margin: 0
+
+footer
+	background-color: #5b6ceb
+	color: #fff
+
+	.topFooter
+		display: flex
+		justify-content: space-between
+		padding: 100px 0
+
+		.about
+			width: 50%
+
+			h1
+				text-transform: uppercase
+				font-size: 1.125em
+				font-weight: 700
+				line-height: 22px
+				text-align: left
+
+			p
+				font-size: .875em
+				line-height: 22px
+				font-weight: 500
+				width: 80%
+				margin-top: 60px
+
+			.socialList
+				list-style-type: none
+				display: flex
+				justify-content: left
+				padding: 0
+				margin: 0
+				margin-top: 65px
+
+				li
+					margin-right: 4%
+
+		.contactUs
+			width: 50%
+
+			h1
+				text-transform: uppercase
+				font-size: 1.125em
+				font-weight: 700
+				line-height: 22px
+				text-align: left
+
+			.contUsList
+				display: flex
+				flex-wrap: wrap
+				width: 60%
+				justify-content: space-between
+				margin-top: 45px
+
+				p
+					font-size: .875em
+					line-height: 22px
+					font-weight: 500
+					text-align: left
+					position: relative
+
+				.addressItem
+					position: relative
+
+				.mailItem
+					position: relative
+					margin-right: -8%
+
+					p
+						text-align: right
+
+				.phoneItem
+					position: relative
+
+				.webItem
+					position: relative
+
+
+				.addressItem:before
+					content: ''
+					position: absolute
+					top: 20px
+					left: -30px
+					background-image: url("../img/mapicon.png")
+					width: 15px
+					height: 21px
+
+				.mailItem:before
+					content: ''
+					position: absolute
+					top: 20px
+					left: -30px
+					background-image: url("../img/mailicon.png")
+					width: 21px
+					height: 13px
+
+				.phoneItem:before
+					content: ''
+					position: absolute
+					top: 20px
+					left: -30px
+					background-image: url("../img/callicon.png")
+					width: 21px
+					height: 21px
+
+				.webItem:before
+					content: ''
+					position: absolute
+					top: 20px
+					left: -30px
+					background-image: url("../img/webicon.png")
+					width: 21px
+					height: 21px
+
+	.bottomFooter
+		background-color: #5363d8
+
+		p
+			color: #b7bffc
+			font-size: .875em
+			font-weight: 500
+			text-align: center
+			padding: 45px 0
+			margin: 0 auto
+
+// .hamburger
+// 	background: none
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	line-height: 45px
+// 	padding: 5px 15px 0 15px
+// 	color: #777
+// 	border: 0
+// 	font-size: 1.4em
+// 	font-weight: bold
+// 	cursor: pointer
+// 	outline: none
+// 	z-index: 10000000000
+
+// .cross
+// 	background: none
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	padding: 7px 15px 0 15px
+// 	color: #777
+// 	font-weight: bold
+// 	line-height: 65px
+// 	font-size: 3em
+// 	cursor: pointer
+// 	outline: none
+// 	z-index: 10000000000
+
+// .glyphicon-home
+// 	color: #fff
+// 	font-size: 1.5em
+// 	margin-top: 5px
+// 	margin: 0 auto
+
