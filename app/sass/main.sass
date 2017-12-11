@@ -1,10 +1,5 @@
 @import "./app/libs/breakpoint-sass/stylesheets/breakpoint"
 
-// $phone: 320px
-// $small: 425px
-// $tablet: 800px
-// $middle: 1024px
-// $large: 1170px
 
 *
 	margin: 0
@@ -14,12 +9,14 @@ body
 	width: 100%
 	position: relative
 	font-family: 'Open Sans', sans-serif
-	margin: 0
-	padding: 0
+	margin: 0 
+	padding: 0 
 
 .container
 	margin: 0 auto
 	max-width: 1170px
+	overflow: hidden
+
 
 	@include respond-to('tablet')
 		margin: 0 10%
@@ -59,7 +56,8 @@ a.nav-link
 
 header
 	height: 100px
-	z-index: 100000000000
+
+
 
 .fixed
 	position: fixed
@@ -67,12 +65,19 @@ header
 
 .fixedHeader
 	background-color: #fff
+	z-index: 10000
+
+
+.navigation
+	position: relative
+		
 
 nav 
 	display: flex
 	justify-content: center
 	align-items: center
-	background-color: #fff
+	
+
 
 	@include respond-to('tablet')
 		background-color: #fff
@@ -163,7 +168,7 @@ nav
 			background-color: #fff
 			padding: 33px 40px 35px 30px
 			border-radius: 18px
-			margin-left: 16.5%
+			// margin-left: 16.5%
 			box-shadow: 4px 4px 15px rgba(0,0,0, .2)
 
 			@media (max-width: 1170px)
