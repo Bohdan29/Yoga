@@ -1,3 +1,11 @@
+@import "./app/libs/breakpoint-sass/stylesheets/breakpoint"
+
+// $phone: 320px
+// $small: 425px
+// $tablet: 800px
+// $middle: 1024px
+// $large: 1170px
+
 *
 	margin: 0
 	padding: 0
@@ -12,6 +20,18 @@ body
 .container
 	margin: 0 auto
 	max-width: 1170px
+
+	@include respond-to('tablet')
+		margin: 0 10%
+
+	@media (max-width: 1024px)
+		margin: 0 7%
+
+	@media (max-width: 1170px)  
+		margin: 0 7%
+
+h1.main
+	font-size: 3em 
 
 h2
 	text-align: center
@@ -39,6 +59,7 @@ a.nav-link
 
 header
 	height: 100px
+	z-index: 100000000000
 
 .fixed
 	position: fixed
@@ -46,18 +67,26 @@ header
 
 .fixedHeader
 	background-color: #fff
-	z-index: 10000
 
 nav 
 	display: flex
 	justify-content: center
 	align-items: center
-	
-	
+	background-color: #fff
+
+	@include respond-to('tablet')
+		background-color: #fff
+		flex-direction: column	
+
 
 	a.logo-link
 		margin: 16px 150px
 		position: relative
+
+		@media (max-width: 1024px)
+			margin: 
+				left: 7%
+				right: 7%
 	
 	ul
 		list-style-type: none 
@@ -66,7 +95,14 @@ nav
 		li
 			margin-right: 30px
 			position: relative
+
+			@include respond-to('tablet')
+				margin-right: 0
 		 
+			a
+				@include respond-to('tablet')
+					font-size: 25px !important
+
 			a.nav-link:hover:before
 				position: absolute
 				content: ''
@@ -89,9 +125,22 @@ nav
 		width: 40%
 		justify-content: flex-end
 
+		@include respond-to('tablet')
+				flex-direction: column
+				align-items: center
+				background-color: #fff
+				margin-top: 30px	
+
 	ul.nav-right
 		width: 40%
 		justify-content: flex-start
+
+		@include respond-to('tablet')
+				flex-direction: column
+				align-items: center
+				background-color: #fff
+				margin-bottom: 30px
+
 
 .slider-block
 	background-image: url("../img/bg-sliderBlock.png")
@@ -104,6 +153,11 @@ nav
 		justify-content: space-around
 		padding: 100px 0
 
+		@media (max-width: 1024px)
+			flex-direction: column-reverse
+			align-items: center
+			padding-top: 0
+
 		.form-blcok 
 			width: 19.5%
 			background-color: #fff
@@ -111,6 +165,21 @@ nav
 			border-radius: 18px
 			margin-left: 16.5%
 			box-shadow: 4px 4px 15px rgba(0,0,0, .2)
+
+			@media (max-width: 1170px)
+				margin-left: 7%
+
+			@media (max-width: 1024px)
+				width: 35.5%
+				margin: 
+					top: 10px
+					left: 2%
+				padding: 
+					top: 13px
+					bottom: 15px
+
+			@media (max-width: 425px) 
+				width: 60%
 
 			form 
 				width: 100%
@@ -147,7 +216,8 @@ nav
 				padding-bottom: 25px
 				letter-spacing: .8px
 				
-
+				@media (max-width: 1024px)
+					padding-bottom: 10px
 
 
 			button
@@ -176,7 +246,10 @@ nav
 			align-items: flex-start
 			margin-top: 56px
 
-			h1
+			@media (max-width: 1024px)
+				margin-top: 0
+
+			h1.main
 				text-transform: uppercase
 				color: #fff
 				font:
@@ -184,6 +257,13 @@ nav
 					weight: bold
 				margin-bottom: 33px
 				line-height: 1.5
+
+				@media (max-width: 1024px)
+					font-size: 2em
+					margin:  
+						bottom: 15px
+						top: 25px
+					
 			h3
 				width: 67%
 		
@@ -202,6 +282,9 @@ nav
 	align-items: center
 	margin-top: 99px
 
+	@media (max-width: 1024px)
+		margin-top: 0
+
 	h2 
 		line-height: 2.5
 
@@ -210,6 +293,12 @@ nav
 		display: flex
 		flex-wrap: wrap
 		margin-top: 57px
+
+		@media (max-width: 1170px)
+			flex-wrap: nowrap
+			flex-direction: column
+			align-items: center
+			justify-content: center 
 
 		a 
 			display: block
@@ -221,6 +310,16 @@ nav
 			text-decoration: none
 			border-radius: 5px
 
+			@media (max-width: 1170px)
+				margin-right: 0
+				width: 85%
+
+			@media (max-width: 800px)
+				width: 70%
+
+			@media (max-width: 425px)
+				width: 90%
+
 			&:nth-child(2n)
 				margin-right: 0
 
@@ -231,13 +330,26 @@ nav
 				border-radius: 8px
 				align-items: center
 
+				@media (max-width: 800px) 
+					flex-direction: column
+					align-items: center
+
 				img
 					display: block
+
+					@media (max-width: 800px) 
+						width: 100%
+						border-radius: 8px
 			
 				.descrBlock
 					padding-left: 32px
 					padding-right: 1%
 
+					@media (max-width: 800px) 
+						margin: 20px 0
+
+					@media (max-width: 425px) 
+						padding-left: 5%
 					h1
 						color: #777777
 						font:
@@ -270,6 +382,13 @@ nav
 		width: 25%
 		position: relative
 
+		@media (max-width: 1024px)
+			width: 50%
+
+		@media (max-width: 425px)
+			width: 100%
+
+
 		&:hover .img-bg
 			display: block
 
@@ -293,9 +412,20 @@ nav
 		display: flex
 		justify-content: space-between
 
+		@media (max-width: 1024px)
+			flex-direction: column
+			align-items: center
+
 		.abUsCont
 			width: 40%
 			margin-top: 13px
+
+			@media (max-width: 1024px)
+				width: 70%
+				margin-bottom: 50px
+
+			@media (max-width: 425px) 
+				width: 100%		
 
 
 			h1
@@ -316,6 +446,12 @@ nav
 			margin: 
 				top: -5px
 				right: -1%
+
+			@media (max-width: 1024px)
+				width: 70%
+
+			@media (max-width: 425px) 
+				width: 100%
 
 .slick-prev
 	width: 50px !important
@@ -371,6 +507,10 @@ nav
 	background-repeat: repeat-x
 	width: 100%
 
+	@media (max-width: 1024px)
+		background-position: center center
+		background-repeat: repeat
+
 	.featuresList
 		display: flex
 		flex-wrap: wrap
@@ -378,6 +518,9 @@ nav
 		width: 100%
 		padding: 120px 0
 		margin-top: 100px
+
+		@media (max-width: 1024px)
+			padding: 50px 0
 		
 		.featureItem
 			width: 23%
@@ -388,6 +531,14 @@ nav
 			margin-top: 5px
 			text-align: center
 			color: #fff
+
+			@media (max-width: 1024px)
+				width: 50%
+				margin-top: 0
+				margin-bottom: 20px	
+
+			@media (max-width: 425px)
+				width: 100%
 	
 			&:nth-child(5),
 			&:nth-child(6),
@@ -396,17 +547,27 @@ nav
 				margin-top: 55px
 				margin-bottom: 13px
 
+				@media (max-width: 1024px)
+					margin: 0
+
 			h3
 				margin-top: 27px
 				font-size: 18px
 				font-weight: bold
 				line-height: 27px
 
+				@media (max-width: 1024px)
+					font-size: 15px
+					line-height: 18px
+
 			p
 				font-size: 16px
 				font-weight: 500
 				line-height: 27px
 				margin-top: 12px
+
+				@media (max-width: 1024px)
+					font-size: 13px
 
 .pricesBlock
 	width: 100%
@@ -421,6 +582,10 @@ nav
 		justify-content: space-between
 		margin: 5px 0
 
+		@media (max-width: 1024px)
+			flex-direction: column
+			align-items: center
+
 		.priceItems
 			width: 31.6%
 			display: flex
@@ -430,6 +595,16 @@ nav
 			background-color: #fff
 			box-shadow: 4px 4px 15px rgba(0,0,0, .1)
 			border-radius: 10px
+
+			@media (max-width: 1024px)
+				width: 50%
+				margin-bottom: 30px
+
+		  @media (max-width: 800px)
+		  	width: 70%
+
+			@media (max-width: 425px) 
+				width: 100%
 
 
 			.titlePrice
@@ -491,13 +666,13 @@ nav
 							content: ''
 							background-image: url("../img/bottLine.png")
 							bottom: 19px
-							left: 40.5%
+							left: 32.5%
 							height: 1px
 							width: 99px
 
-						
+							@media (max-width: 1024px)
+								left: 36.5%
 
-						
 					img
 						margin: 0
 						padding: 20px 0
@@ -530,6 +705,10 @@ nav
 	margin-top: 100px
 	margin-bottom: 50px
 
+	@media (max-width: 1024px)
+		flex-direction: column
+		align-items: center
+
 	.avatarBlock
 		width: 40%
 		margin: 
@@ -548,6 +727,10 @@ nav
 			top: 6px
 			left: 32px
 
+		@media (max-width: 1024px)
+			width: 70%
+			margin-left: 0
+
 		.descrReview
 			width: 75%
 			color: #000
@@ -556,6 +739,9 @@ nav
 			font-style: italic
 			position: relative
 			line-height: 1.5
+
+			@media (max-width: 1024px)
+				width: 100%
 
 			&:before
 				content: open-quote
@@ -566,6 +752,7 @@ nav
 				top: -20px
 				left: -45px
 
+
 			&:after
 				content: close-quote
 				position: absolute
@@ -575,7 +762,8 @@ nav
 				bottom: -50px
 				right: -55px
 	
-
+				@media (max-width: 425px) 
+					right: -25px
 
 		.trainer-slick
 			width: 280px !important
@@ -583,6 +771,9 @@ nav
 			position: absolute
 			top: 116%
 			left: 2%
+
+			@media (max-width: 425px) 
+				display: none !important
 
 			.slick-next
 				right: 17px !important
@@ -608,8 +799,6 @@ nav
 					min-height: 80px
 					top: 116% !important
 					left: 23% !important
-
-					
 					
 					.text
 						position: relative
@@ -659,8 +848,22 @@ nav
 	top: 35% !important
 	right: -55px !important
 
+	@media (max-width: 1170px)
+		right: -30px !important
+
+	@media (max-width: 1024px)
+		flex-direction: row !important
+		top: 110% !important
+		left: 36% !important
+
+	@media (max-width: 425px) 
+		left: 28% !important
+
 	li
 		margin: 8px 0 !important
+
+		@media (max-width: 1024px)
+			margin: 0 10px !important
 
 		button
 			&:before
@@ -690,9 +893,17 @@ footer
 		justify-content: space-between
 		padding: 100px 0
 
+		@media (max-width: 1024px)
+			flex-direction: column
+			align-items: center
+
 		.about
 			width: 50%
 			margin-top: -20px
+
+			@media (max-width: 1024px)
+				width: 100%
+				margin-top: 0	
 
 			h1
 				text-transform: uppercase
@@ -723,6 +934,10 @@ footer
 		.contactUs
 			width: 49%
 
+			@media (max-width: 1024px)
+				width: 100%
+				margin-top: 40px
+
 			h1
 				text-transform: uppercase
 				font-size: 1.125em
@@ -741,15 +956,27 @@ footer
 				margin: 
 					top: 45px
 					left: 42px
+
+				@media (max-width: 320px)
+					font-weight: nowrap
+					flex-direction: column
+					align-items: flex-start
+					margin-left: 40%
 				
 				.contUsItem
 					width: 39%
+
+					@media (max-width: 320px)
+						width: 50%
 
 					&:nth-child(1),
 					&:nth-child(2)
 						margin: 
 							right: 10px
 							bottom: 27px
+
+						@media (max-width: 320px)
+							margin-right: 0
 
 					a
 						font-size: .875em
@@ -827,38 +1054,51 @@ footer
 			padding: 45px 0
 			margin: 0 auto
 
-// .hamburger
-// 	background: none
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	line-height: 45px
-// 	padding: 5px 15px 0 15px
-// 	color: #777
-// 	border: 0
-// 	font-size: 1.4em
-// 	font-weight: bold
-// 	cursor: pointer
-// 	outline: none
-// 	z-index: 10000000000
+.hamburger
+	display: none
+	background: none
+	position: absolute
+	top: 0
+	left: 0
+	line-height: 45px
+	padding: 5px 15px 0 15px
+	color: #777
+	border: 0
+	font-size: 1.4em
+	font-weight: bold
+	cursor: pointer
+	outline: none
+	z-index: 10000000000
 
-// .cross
-// 	background: none
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	padding: 7px 15px 0 15px
-// 	color: #777
-// 	font-weight: bold
-// 	line-height: 65px
-// 	font-size: 3em
-// 	cursor: pointer
-// 	outline: none
-// 	z-index: 10000000000
+	@include respond-to('tablet')
+		display: block
 
-// .glyphicon-home
-// 	color: #fff
-// 	font-size: 1.5em
-// 	margin-top: 5px
-// 	margin: 0 auto
+.cross
+	display: none
+	background: none
+	position: absolute
+	top: 0
+	left: 0
+	padding: 7px 15px 0 15px
+	color: #777
+	font-weight: bold
+	line-height: 65px
+	font-size: 3em
+	cursor: pointer
+	outline: none
+	z-index: 10000000000
+	border: none
+
+	@include respond-to('tablet')
+		display: block
+
+.glyphicon-home
+	display: none
+	color: #fff
+	font-size: 1.5em
+	margin-top: 5px
+	margin: 0 auto
+
+	@include respond-to('tablet')
+		display: block
 

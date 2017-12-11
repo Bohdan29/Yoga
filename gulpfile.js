@@ -11,6 +11,7 @@ var gulp       = require('gulp'),
     cache        = require('gulp-cache'), 
     autoprefixer = require('gulp-autoprefixer');
 
+
 gulp.task('sass', function(){ 
     return gulp.src('app/sass/**/*.sass') 
         .pipe(sass()) 
@@ -90,3 +91,13 @@ gulp.task('clear', function () {
 })
 
 gulp.task('default', ['watch']);
+
+gulp.task('breakpoint', function() {
+  gulp
+  .src('app/sass/*.sass')
+  .pipe(sass({
+    includePaths: ['app/libs/breakpoint-sass/stylesheets/breakpoint']
+  }))
+  .pipe(gulp.dest('app/css'))
+
+});

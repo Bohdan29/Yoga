@@ -34,6 +34,27 @@ $(document).ready(function(){
         e.preventDefault();
     });
 });
+// hamburger menu
+
+$( document ).ready(function() {
+if($(window).width()<=800) {
+$( ".cross" ).hide();
+$( ".navigation" ).hide();
+$( ".hamburger" ).click(function() {
+$( ".navigation" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
+
+$( ".cross" ).click(function() {
+$( ".navigation" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
+}
+});
 
 // validation form
 var field = new Array('name', 'phone');
