@@ -2193,7 +2193,7 @@ nav {
       @media (max-width: 1024px) {
         .aboutUsBlock .container .abUsSlider {
           width: 70%;
-          margin-bottom: 50px; } }
+          margin-bottom: 120px; } }
       @media (max-width: 425px) {
         .aboutUsBlock .container .abUsSlider {
           width: 100%; } }
@@ -2265,10 +2265,13 @@ nav {
             justify-content: space-between;
     width: 100%;
     padding: 120px 0;
-    margin-top: 100px; }
+    margin: 50px 0; }
     @media (max-width: 1024px) {
       .features-block .featuresList {
         padding: 50px 0; } }
+    @media (max-width: 800px) {
+      .features-block .featuresList {
+        margin-top: 0; } }
     .features-block .featuresList .featureItem {
       width: 23%;
       display: -webkit-box;
@@ -2296,6 +2299,12 @@ nav {
           width: 50%;
           margin-top: 0;
           margin-bottom: 20px; } }
+      @media (max-width: 1024px) {
+        .features-block .featuresList .featureItem {
+          width: 32%; } }
+      @media (max-width: 800px) {
+        .features-block .featuresList .featureItem {
+          width: 40%; } }
       @media (max-width: 425px) {
         .features-block .featuresList .featureItem {
           width: 100%; } }
@@ -2341,7 +2350,7 @@ nav {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 5px 0; }
-    @media (max-width: 1024px) {
+    @media (max-width: 992px) {
       .pricesBlock .priceList {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -2373,13 +2382,13 @@ nav {
               box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
       -webkit-border-radius: 10px;
               border-radius: 10px; }
-      @media (max-width: 1024px) {
+      @media (max-width: 992px) {
         .pricesBlock .priceList .priceItems {
-          width: 50%;
+          width: 40%;
           margin-bottom: 30px; } }
-  @media (max-width: 1024px) and (max-width: 800px) {
+  @media (max-width: 992px) and (max-width: 800px) {
     .pricesBlock .priceList .priceItems {
-      width: 70%; } }
+      width: 50%; } }
       @media (max-width: 425px) {
         .pricesBlock .priceList .priceItems {
           width: 100%; } }

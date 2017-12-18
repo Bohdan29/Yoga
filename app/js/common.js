@@ -1,3 +1,14 @@
+
+$(document).ready(function(){
+    if($(window).width()<=800) {
+        $("nav").hide();
+        $(".hamburger").on("click touch", function(){
+            $("nav").slideToggle();
+        });
+    }
+});
+
+
 //fixed header
 $(document).ready(function(){
          
@@ -36,25 +47,26 @@ $(document).ready(function(){
 });
 // hamburger menu
 
-$( document ).ready(function() {
-if($(window).width()<=800) {
-$( ".cross" ).hide();
-$( ".navigation" ).hide();
-$( ".hamburger" ).click(function() {
-$( ".navigation" ).slideToggle( "slow", function() {
-$( ".hamburger" ).hide();
-$( ".cross" ).show();
-});
-});
+// $( document ).ready(function() {
+//     if($(window).width()<=800) {
+//         $( ".cross" ).hide();
+//         $( ".navigation" ).hide();
+//         $( ".hamburger" ).click(function() {
+//             $( ".navigation" ).slideToggle( "slow", function() {
+//                 $( ".hamburger" ).hide();
+//                 $( ".cross" ).show();
+//             });
+//         });
 
-$( ".cross" ).click(function() {
-$( ".navigation" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hamburger" ).show();
-});
-});
-}
-});
+//         $( ".cross" ).click(function() {
+//             $( ".navigation" ).slideToggle( "slow", function() {
+//                 $( ".cross" ).hide();
+//                 $( ".hamburger" ).show();
+//             });
+//         });
+//     }
+// });
+
 
 // validation form
 var field = new Array('name', 'phone');
